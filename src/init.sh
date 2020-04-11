@@ -6,6 +6,7 @@ declare -A RESERVED_VALUES=( [--new]=1 [-n]=1 [--remove]=1 [-r]=1 [--find]=1 [-f
                             [--last]=1 [-l]=1 [--conceal]=1 [-c]=1 [--description]=1 [-d]=1 [--print]=1 [-p]=1)
 declare -A MAINCOMMANDS=( [--new]=1 [-n]=1 [--remove]=1 [-r]=1 [--find]=1 [-f]=1 [--export]=1 [-e]=1 [--print]=1 [-p]=1)
 DEFAULT_EXPORTFILE="memo.json"
+HELPFILE="help.txt"
 mode=0
 options=00
 optionsVal=""
@@ -19,7 +20,7 @@ isValue=false
 
 function print_help()
 {
-  echo "<Help>"
+  cat $HELPFILE
   exit 1
 }
 
@@ -96,6 +97,8 @@ function processArg()
         print_help
       fi ;;
 
+    --help)
+      print_help ;;
     *)
       print_help ;;
 

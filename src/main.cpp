@@ -15,7 +15,7 @@ const size_t CONCEAL_VAL = 1,
 
 using CommandList = std::vector<Command>;
 enum class Mode {ADD=1, REMOVE, PRINT, FIND, EXPORT};
-std::string const DATAFILE = "data.json";
+std::string const DATAFILE = "memo.json";
 
 /**
  * Adds a command in the datafile
