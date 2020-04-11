@@ -1,0 +1,19 @@
+{
+  "commands" : [
+    {
+      "needSudo": false,
+      "isComplex": false,
+      "description": "A test command",
+      "command": "ls",
+      "arguments": "-l"
+    },
+    {
+      "needSudo": true,
+      "isComplex": true,
+      "description": "A complex command",
+      "command": "ls -l | grep Documents",
+      "arguments": ""
+    }
+  ]
+
+}

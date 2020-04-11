@@ -1,0 +1,10 @@
+{
+    "commands": [
+        {
+            "datetime": 1586625561,
+            "description": "",
+            "isConcealed": false,
+            "value": "memo -p"
+        }
+    ]
+}
