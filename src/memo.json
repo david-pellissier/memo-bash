@@ -1,16 +1,5 @@
 {
     "commands": [
-        {
-            "datetime": 1586625561,
-            "description": "",
-            "isConcealed": false,
-            "value": "memo -p"
-        },
-        {
-            "datetime": 1586632065,
-            "description": "",
-            "isConcealed": false,
-            "value": "./init.sh -p"
-        }
+        
     ]
 }

@@ -4,8 +4,8 @@ PROGRAM_PATH="cmake-build-debug/MemoBash"
 # bash 4.0 is required for this to work
 declare -A RESERVED_VALUES=( [--new]=1 [-n]=1 [--remove]=1 [-r]=1 [--find]=1 [-f]=1 [--export]=1 [-e]=1
                             [--last]=1 [-l]=1 [--conceal]=1 [-c]=1 [--description]=1 [-d]=1 [--print]=1 [-p]=1)
-declare -A MAINCOMMANDS=( [--new]=1 [-n]=1 [--remove]=1 [-r]=1 [--find]=1 [-f]=1 [--export]=1 [-e]=1 [--print]=1 [-p]=1)
-DEFAULT_EXPORTFILE="memo.json"
+declare -A MAINCOMMANDS=( [--new]=1 [-n]=1 [--remove]=1 [-r]=1 [--find]=1 [-f]=1 [--export]=1 [-e]=1 [--print]=1 [-p]=1 [--help]=1)
+DEFAULT_EXPORTFILE="memo_export.json"
 HELPFILE="help.txt"
 mode=0
 options=00
@@ -100,6 +100,7 @@ function processArg()
     --help)
       print_help ;;
     *)
+      echo Error: This parameter does not exist
       print_help ;;
 
     esac

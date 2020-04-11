@@ -5,7 +5,7 @@ ACTIONS:
   -n, --new [cmd]     : Register new command. If no value is given, use --last
   -r, --remove <id>   : Remove corresponding ID from the data file
   -f, --find <key>    : Search for the key in all registered commands
-  -e, --export [file] : Export the data file. If no value is given, use "./memo.json"
+  -e, --export [file] : Export the data file. If no value is given, use "./memo_export.json"
   -p, --print         : Display all registered commands
   --help              : Print this help message
 
