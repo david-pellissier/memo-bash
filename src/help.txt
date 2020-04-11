@@ -21,4 +21,4 @@ EXAMPLES:
   memo -n "ifconfig -a" -d "display all interfaces which are currently  available"
   memo -e myFolder/exported.json --conceal
 
-  MemoBash 0.1, 2020/04/11, david-pellissier/memo-bash
+MemoBash 0.1, 2020/04/11, david-pellissier/memo-bash
