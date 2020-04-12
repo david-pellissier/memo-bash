@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#WORKINGDIR="install/v0.1/"
 WORKINGDIR="$PWD"/
 DIR_SUFFIX="memo-bash"
 OPT_DIR="/opt/"$DIR_SUFFIX
@@ -58,7 +57,6 @@ if [ ! -d "$OPT_DIR" ] ; then echo Could not create "$OPT_DIR" ; exit 1; fi
 echo Created $OPT_DIR
 
 # Copy files
-
 copyFile $HELP_FILE $OPT_DIR/help.txt
 copyFile $INIT_SCRIPT $OPT_DIR/init.sh
 copyFile $EMPTY_JSON $OPT_DIR/memo.json
@@ -69,6 +67,8 @@ echo ... Copied files
 ln -s  $OPT_DIR/init.sh $INSTALL_LINK
 if [ ! -f $INSTALL_LINK ] ; then echo Could not create $INSTALL_LINK ; exit 1; fi
 echo Created symbolic link
+
+chmod 666 "$OPT_DIR/memo.json"
 
 echo ...
 echo DONE !

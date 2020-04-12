@@ -62,8 +62,8 @@ int main(int argc, char* argv[])
     bool remove_last = (options/REMOVE_LAST_VAL);
 
     // Testing values
-    /*
-    size_t mode = 3;
+/*
+    size_t mode = 1;
     std::string modeVal = "Te";
     size_t options = 0;
     std::string optionVal;

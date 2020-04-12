@@ -73,18 +73,19 @@ bool writeCommand(Command const& cmd, std::string const &file){
     j[CMD_KEY].emplace_back(j_cmd);
 
 
-    writeData(j , file);
 
-
-    return true;
+    return writeData(j , file);
 }
 
 
 bool writeData(json const &jdata, std::string const& file){
     std::ofstream write(file);
 
-    if( ! write.is_open())
+    if( ! write.is_open()){
+        std::cout << "Error: Could not write in the file" << std::endl;
         return false;
+    }
+
 
     write << std::setw(4) << jdata << std::endl;
 
