@@ -1,0 +1,24 @@
+Usage: memo [ACTION] [OPTIONS]
+
+ACTIONS:
+  <null>              : Equivalent to --new --last
+  -n, --new [cmd]     : Register new command. If no value is given, use --last
+  -r, --remove <id>   : Remove corresponding ID from the data file
+  -f, --find <key>    : Search for the key in all registered commands
+  -e, --export [file] : Export the data file. If no value is given, use "./memo_export.json"
+  -p, --print         : Display all registered commands
+  --help              : Print this help message
+
+OPTIONS:
+  -d, --description <dsc> : Add a description to a new command. Can be used with -n only
+  -c, --conceal           : Hide potentially private information such as IP adresses
+                            Can be used with -n and -e
+  -l, --last              : With --new, select the last used command by the user
+                            With --remove, select the last registered command
+
+EXAMPLES:
+  memo
+  memo -n "ifconfig -a" -d "display all interfaces which are currently  available"
+  memo -e myFolder/exported.json --conceal
+
+MemoBash 0.1, 2020/04/11, david-pellissier/memo-bash
