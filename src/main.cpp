@@ -53,7 +53,7 @@ void exportJSON(bool const conceal, std::string const &filepath);
 int main(int argc, char* argv[])
 {
     // Translating arguments
-    size_t mode = std::stoi(argv[1]);
+    Mode mode = Mode(std::stoi(argv[1]));
     std::string modeVal = argv[2];
     size_t options = std::stoi(argv[3]);
     std::string optionVal = argv[4];
@@ -72,7 +72,7 @@ int main(int argc, char* argv[])
     bool remove_last = (options/REMOVE_LAST_VAL);*/
 
     // Redirecting to the associated function
-    switch (Mode(mode))
+    switch (mode)
     {
         case Mode::ADD:
             addCMD(modeVal, optionVal, conceal); break;

@@ -40,14 +40,14 @@ public:
      * @param[string] _desc : description of the command
      * @param[bool] _conc : true if the command is concealed
      */
-    Command(time_t _dt, std::string& _cmd, std::string& _desc, bool _conc);
+    Command(time_t _dt, std::string _cmd, std::string _desc, bool _conc);
 
     /**
      *
      * @param[string] _cmd : command
      * @param[string] _desc : description of the command
      */
-    Command(std::string& _cmd, std::string&  _desc);
+    Command(std::string _cmd, std::string  _desc);
 
     /**
      * Displays the command

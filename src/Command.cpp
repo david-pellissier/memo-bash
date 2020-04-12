@@ -43,12 +43,12 @@ bool Command::contains(std::string key) const {
 
 //// CONSTRUCTORS AND OPERATORS ////
 
-Command::Command(time_t _dt, std::string &_cmd, std::string &_desc, bool _conc) : datetime(_dt), concealed(_conc) {
+Command::Command(time_t _dt, std::string _cmd, std::string _desc, bool _conc) : datetime(_dt), concealed(_conc) {
     description = std::move(removeLeadingSpaces(_desc));
     cmd = std::move(removeLeadingSpaces(_cmd));
 }
 
-Command::Command(std::string &_cmd, std::string &_desc) : cmd(std::move(_cmd)), description(std::move(_desc)) {
+Command::Command(std::string _cmd, std::string _desc) : cmd(std::move(_cmd)), description(std::move(_desc)) {
     this->datetime = time(nullptr);
     this->concealed = false;
 }
